@@ -13,6 +13,9 @@ camaradas(Pares, Resultado) :-
     NombresN = [green, brown, peters, harper, nash],
     pairs_keys_values(ParesNombres, Nombres, NombresN),
 
+    %Realizo una asignación de nombres a números enteros del 1 al 5 para asi dar como resultado una única combinación de números, en otro caso habría 5! combinaciones que cumplan con las restricciones
+    Nombres = [1,2,3,4,5],
+
     %Creo las variables de las ciudades, sus respectivas instancias y creo una lista de pares ordenados relacionandolos
     Ciudades = [Greenfield, Brownsville, Petersburg, Harpers_Ferry, Nashville],
     CiudadesN = [greenfield, brownsville, petersburg, harpers_Ferry, nashville],
@@ -68,7 +71,7 @@ ejercicio2 :-
     %Comienza buscando la lista con las profesiones y ciudades correspondientes con cada nombre.
     camaradas(Pares, Resultado),
 
-    %
+    %Asigna un numero a cada uno
     label(Resultado),
 
     %Obtiene de la lista resultante la posición 1, lo que debolvería la lista con los pares Número-nombre
